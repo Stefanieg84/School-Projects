@@ -3,6 +3,7 @@
 #include "Person.h"
 #include <string>
 #include <stdlib.h>
+#include <ctime>
 using namespace std;
 
 //Get length of FemNames array
@@ -40,6 +41,10 @@ void Person::ReadFileF(ifstream& in) {
 
 }
 
+void Person::WriteFileF(ofstream& out) {
+	out.open("FirstGenerationFemales.txt");
+}
+
 //Read MaleNames.txt into MalNames array
 void Person::ReadFileM(ifstream& in) {
 	in.open("MaleNames.txt");
@@ -63,6 +68,38 @@ void Person::ReadFileM(ifstream& in) {
 
 }
 
-string Person::getFName(string FName) {
+string Person::makeFem() {
+	string FName;
+	int fVal = rand() % 372;
+	srand (time(NULL));
+	string LName;
+	int lVal = rand() % 232;
+	srand(time(NULL));
+	if (LName != FName) {
+		LName = LName;
+	}
+	else {
+		LName._Equal(NULL);
+	}
+	cout << "First Name: " + FName << endl;
+	cout << "Last Name: " +LName << endl;
+	return FName, LName;
+}
 
+string Person::makeMal() {
+	string FName;
+	int fVal = rand() % 232;
+	srand(time(NULL));
+	string LName;
+	int lVal = rand() % 232;
+	srand(time(NULL));
+	if (LName != FName) {
+		LName = LName;
+	}
+	else {
+		LName._Equal(NULL);
+	}
+	cout << "First Name: " + FName << endl;
+	cout << "Last Name: " + LName << endl;
+	return FName, LName;
 }

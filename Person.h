@@ -12,8 +12,8 @@ public:
 	int MalNames[232];
 	int getLengthF();
 	int getLengthM();
-	string getFName(string FName);
-	string getLName(string LName);
+	string makeFem();
+	string makeMal();
 	void ReadFileF(ifstream& in);
 	void WriteFileF(ofstream& out);
 	void ReadFileM(ifstream& in);
